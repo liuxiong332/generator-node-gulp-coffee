@@ -1,5 +1,5 @@
 
-<%= safeSlugname %> = require '../lib/<%= safeSlugname %>'
+<%= safeSlugname %> = require '../lib/<%= slugname %>'
 <% if (testFramework === 'mocha') { %>
 assert = require 'should' <% } %>
 
