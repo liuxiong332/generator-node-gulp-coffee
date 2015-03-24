@@ -125,10 +125,6 @@ module.exports = yeoman.generators.Base.extend({
       name: 'modules',
       message: 'Which modules would you like to include?',
       choices: [{
-          value: 'jscsModule',
-          name: 'jscs (JavaScript Code Style checker)',
-          checked: true
-        }, {
           value: 'releaseModule',
           name: 'release (Bump npm versions with Gulp)',
           checked: true
@@ -146,7 +142,6 @@ module.exports = yeoman.generators.Base.extend({
         return props.modules.indexOf(mod) !== -1;
       };
 
-      this.jscsModule = hasMod('jscsModule');
       this.releaseModule = hasMod('releaseModule');
       this.istanbulModule = hasMod('istanbulModule');
       this.coverallsModule = true;
@@ -249,13 +244,10 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   copyfiles: function () {
-    this.copy('jshintrc', '.jshintrc');
+    this.copy('_coffeelint.json', 'coffeelint.json');
     this.copy('_gitignore', '.gitignore');
     this.copy('_travis.yml', '.travis.yml');
     this.copy('editorconfig', '.editorconfig');
-    if (this.jscsModule) {
-      this.copy('.jscsrc', '.jscsrc');
-    }
 
     this.template('_README.md', 'README.md');
     this.template('_CHANGELOG.md', 'CHANGELOG.md');
@@ -265,13 +257,10 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: function () {
     this.mkdir('lib');
-    this.template('lib/name.js', 'lib/' + this.slugname + '.js');
+    this.template('lib/name.coffee', 'lib/' + this.slugname + '.coffee');
 
     this.mkdir('test');
-    this.template('test/name_test.js', 'test/' + this.slugname + '_test.js');
-
-    this.mkdir('example');
-    this.template('example/simple.js', 'example/simple.js');
+    this.template('test/name_test.coffee', 'test/' + this.slugname + '_test.coffee');
   },
 
   install: function () {
