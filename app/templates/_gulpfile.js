@@ -5,8 +5,8 @@ var plugins = require('gulp-load-plugins')();
 
 var paths = {
   coffee: ['./lib/**/*.coffee'],
-  watch: ['./gulpfile.js', './lib/**', './test/**', '!test/{temp,temp/**}'],
-  tests: ['./test/**/*.coffee', '!test/{temp,temp/**}']
+  watch: ['./gulpfile.js', './lib/**', './spec/**', '!spec/{temp,temp/**}'],
+  tests: ['./spec/**/*.coffee', '!spec/{temp,temp/**}']
 };
 
 var plumberConf = {};

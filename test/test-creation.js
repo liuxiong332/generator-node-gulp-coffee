@@ -7,7 +7,7 @@ var helpers = require('yeoman-generator').test;
 describe('node generator', function () {
   var expectedFiles = [
     'lib/mymodule.coffee',
-    'test/mymodule_test.coffee',
+    'spec/mymodule-spec.coffee',
     '.gitignore',
     'coffeelint.json',
     '.travis.yml',

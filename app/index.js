@@ -259,8 +259,8 @@ module.exports = yeoman.generators.Base.extend({
     this.mkdir('lib');
     this.template('lib/name.coffee', 'lib/' + this.slugname + '.coffee');
 
-    this.mkdir('test');
-    this.template('test/name_test.coffee', 'test/' + this.slugname + '_test.coffee');
+    this.mkdir('spec');
+    this.template('spec/name-spec.coffee', 'spec/' + this.slugname + '-spec.coffee');
   },
 
   install: function () {
