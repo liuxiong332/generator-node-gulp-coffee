@@ -1,6 +1,7 @@
 node_modules/
 temp/<% if (coverallsModule) { %>
 coverage/
+dist/
 <% } %>npm-debug.log
 .DS_Store
 .idea
