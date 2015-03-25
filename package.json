@@ -41,7 +41,9 @@
     "gulp-plumber": "^0.6.5",
     "gulp-util": "^3.0.1",
     "jshint-stylish": "^0.4.0",
-    "should": "^4.0.4"
+    "should": "^4.0.4",
+    "rimraf": "^2.3.2",
+    "yeoman-generator": "0.18.10"
   },
   "peerDependencies": {
     "yo": ">=1.0.3"
