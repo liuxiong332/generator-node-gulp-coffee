@@ -5,6 +5,19 @@ var path = require('path');
 var helpers = require('yeoman-generator').test;
 
 describe('node generator', function () {
+  var expectedFiles = [
+    'lib/mymodule.coffee',
+    'test/mymodule_test.coffee',
+    '.gitignore',
+    'coffeelint.json',
+    '.travis.yml',
+    '.editorconfig',
+    'gulpfile.js',
+    'package.json',
+    'README.md',
+    'CHANGELOG.md'
+  ];
+
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
@@ -20,22 +33,7 @@ describe('node generator', function () {
   });
 
   it('creates expected files', function (done) {
-    var expectedFiles = [
-      'lib/mymodule.js',
-      'test/mymodule_test.js',
-      'example/simple.js',
-      '.gitignore',
-      '.jshintrc',
-      '.travis.yml',
-      '.editorconfig',
-      'gulpfile.js',
-      'package.json',
-      'README.md',
-      'CHANGELOG.md'
-    ];
-
     var expectedContent = [
-      ['lib/mymodule.js', /https:\/\/github.com\/octocat\/mymodule/],
       ['package.json', /"name": "mymodule"/]
     ];
 
@@ -58,22 +56,8 @@ describe('node generator', function () {
   });
 
   it('creates expected files', function (done) {
-    var expectedFiles = [
-      'lib/mymodule.js',
-      'test/mymodule_test.js',
-      'example/simple.js',
-      '.gitignore',
-      '.jshintrc',
-      '.travis.yml',
-      '.editorconfig',
-      'gulpfile.js',
-      'package.json',
-      'README.md',
-      'CHANGELOG.md'
-    ];
-
     var expectedContent = [
-      ['lib/mymodule.js', /http:\/\/example.com/],
+      ['lib/mymodule.coffee', /http:\/\/example.com/],
       ['package.json', /"name": "mymodule"/]
     ];
 
@@ -97,20 +81,6 @@ describe('node generator', function () {
   });
 
   it('generator with releaseModule', function (done) {
-    var expectedFiles = [
-      'lib/mymodule.js',
-      'test/mymodule_test.js',
-      'example/simple.js',
-      '.gitignore',
-      '.jshintrc',
-      '.travis.yml',
-      '.editorconfig',
-      'gulpfile.js',
-      'package.json',
-      'README.md',
-      'CHANGELOG.md'
-    ];
-
     var expectedContent = [
       ['package.json', /"gulp-bump"/],
       ['package.json', /"name": "mymodule"/],
@@ -124,45 +94,6 @@ describe('node generator', function () {
       'authorName': 'Octo Cat',
       'authorEmail': 'octo@example.com',
       'modules': ['releaseModule'],
-      'dependencies': []
-    });
-
-    this.app.run({}, function () {
-      helpers.assertFile(expectedFiles);
-      helpers.assertFileContent(expectedContent);
-      done();
-    });
-  });
-
-  it('generator with jscsModule', function (done) {
-    var expectedFiles = [
-      'lib/mymodule.js',
-      'test/mymodule_test.js',
-      'example/simple.js',
-      '.gitignore',
-      '.jshintrc',
-      '.jscsrc',
-      '.travis.yml',
-      '.editorconfig',
-      'gulpfile.js',
-      'package.json',
-      'README.md',
-      'CHANGELOG.md'
-    ];
-
-    var expectedContent = [
-      ['package.json', /"name": "mymodule"/],
-      ['package.json', /"gulp-jscs"/]
-    ];
-
-    helpers.mockPrompt(this.app, {
-      'name': 'mymodule',
-      'description': 'awesome module',
-      'license': 'MIT',
-      'githubUsername': 'octocat',
-      'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
-      'modules': ['jscsModule'],
       'dependencies': []
     });
 
@@ -241,26 +172,12 @@ describe('node generator', function () {
   });
 
   it('generator with istanbul', function (done) {
-    var expectedFiles = [
-      'lib/mymodule.js',
-      'test/mymodule_test.js',
-      'example/simple.js',
-      '.gitignore',
-      '.jshintrc',
-      '.travis.yml',
-      '.editorconfig',
-      'gulpfile.js',
-      'package.json',
-      'README.md',
-      'CHANGELOG.md'
-    ];
-
     var expectedContent = [
       ['.gitignore', /^(?!coverage\/)/],
       ['gulpfile.js', /gulp.task\('istanbul'/],
       ['gulpfile.js', /gulp.task\('test', \['lint', 'istanbul'\]\);/],
       ['package.json', /"name": "mymodule"/],
-      ['package.json', /"gulp-istanbul"/]
+      ['package.json', /"gulp-coffee-istanbul"/]
     ];
 
     helpers.mockPrompt(this.app, {
@@ -282,26 +199,13 @@ describe('node generator', function () {
   });
 
   it('generator with istanbul and coveralls', function (done) {
-    var expectedFiles = [
-      'lib/mymodule.js',
-      'test/mymodule_test.js',
-      'example/simple.js',
-      '.gitignore',
-      '.jshintrc',
-      '.travis.yml',
-      '.editorconfig',
-      'gulpfile.js',
-      'README.md',
-      'CHANGELOG.md',
-      'package.json'
-    ];
     var expectedContent = [
       ['.travis.yml', /npm run coveralls/],
       ['.gitignore', /coverage\//],
       ['gulpfile.js', /gulp.task\('istanbul'/],
       ['gulpfile.js', /gulp.task\('test', \['lint', 'istanbul'\]\);/],
       ['package.json', /"name": "mymodule"/],
-      ['package.json', /"gulp-istanbul"/],
+      ['package.json', /"gulp-coffee-istanbul"/],
       ['package.json', /"coveralls": "gulp test/]
     ];
 

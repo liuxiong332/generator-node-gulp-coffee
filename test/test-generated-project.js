@@ -39,7 +39,9 @@ describe('execute generated project', function () {
     });
 
     this.app.run({}, function () {
-      var npmTest = spawn('npm', ['test']);
+      var npmFile = 'npm';
+      if (process.platform === 'win32') npmFile = 'npm.cmd'
+      var npmTest = spawn(npmFile, ['test']);
       var testError = '';
 
       npmTest.stderr.on('data', function (data) {

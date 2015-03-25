@@ -41,6 +41,7 @@ gulp.task('istanbul', function (cb) {
 });<% } else { %>
 
 gulp.task('unitTest', function () {
+  require('coffee-script/register')
   gulp.src(paths.tests, {cwd: __dirname})
     .pipe(plugins.plumber(plumberConf))<% if (testFramework === 'jasmine') { %>
     .pipe(plugins.jasmine());<% } %><% if (testFramework === 'mocha') { %>
