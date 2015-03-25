@@ -104,11 +104,11 @@ Should you have any problems or wishes for improvements, feel free to open an [i
 
 Logo by [Koji Wakayama](https://github.com/kojiwakayama)
 
-[npm-url]: https://npmjs.org/package/generator-node-gulp
-[npm-image]: https://badge.fury.io/js/generator-node-gulp.svg
-[travis-url]: https://travis-ci.org/youngmountain/generator-node-gulp
-[travis-image]: https://travis-ci.org/youngmountain/generator-node-gulp.svg?branch=master
-[daviddm-url]: https://david-dm.org/youngmountain/generator-node-gulp.svg?theme=shields.io
-[daviddm-image]: https://david-dm.org/youngmountain/generator-node-gulp
-[coveralls-url]: https://coveralls.io/r/youngmountain/generator-node-gulp
-[coveralls-image]: https://coveralls.io/repos/youngmountain/generator-node-gulp/badge.png
+[npm-url]: https://npmjs.org/package/generator-node-gulp-coffee
+[npm-image]: https://badge.fury.io/js/generator-node-gulp-coffee.svg
+[travis-url]: https://travis-ci.org/liuxiong332/generator-node-gulp-coffee
+[travis-image]: https://travis-ci.org/liuxiong332/generator-node-gulp-coffee.svg?branch=master
+[daviddm-url]: https://david-dm.org/liuxiong332/generator-node-gulp-coffee.svg?theme=shields.io
+[daviddm-image]: https://david-dm.org/liuxiong332/generator-node-gulp-coffee
+[coveralls-url]: https://coveralls.io/r/liuxiong332/generator-node-gulp-coffee
+[coveralls-image]: https://coveralls.io/repos/liuxiong332/generator-node-gulp-coffee/badge.png
