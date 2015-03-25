@@ -16,7 +16,7 @@ describe('execute generated project', function () {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('node-gulp:app', [
+      this.app = helpers.createGenerator('node-gulp-coffee:app', [
         '../../app'
       ]);
       this.app.options['skip-install'] = false;
