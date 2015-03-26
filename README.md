@@ -2,7 +2,10 @@
   <img src="node-gulp.png"/>
 </p>
 # node gulp coffee
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image] [![Coverage Status][coveralls-image]][coveralls-url]
+[![NPM version](https://badge.fury.io/js/generator-node-gulp-coffee.svg)](https://npmjs.org/package/generator-node-gulp-coffee)
+[![Build Status](https://travis-ci.org/liuxiong332/generator-node-gulp-coffee.svg?branch=master)](https://travis-ci.org/liuxiong332/generator-node-gulp-coffee)
+[![Dependency Status](https://david-dm.org/liuxiong332/generator-node-gulp-coffee.svg?theme=shields.io)](https://david-dm.org/liuxiong332/generator-node-gulp-coffee)
+[![Coverage Status](https://coveralls.io/repos/liuxiong332/generator-node-gulp-coffee/badge.svg?branch=master)](https://coveralls.io/r/liuxiong332/generator-node-gulp-coffee?branch=master)
 
 > Based on [generator-node-gulp](https://github.com/youngmountain/generator-node-gulp)
 
@@ -103,12 +106,3 @@ Should you have any problems or wishes for improvements, feel free to open an [i
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
 Logo by [Koji Wakayama](https://github.com/kojiwakayama)
-
-[npm-url]: https://npmjs.org/package/generator-node-gulp-coffee
-[npm-image]: https://badge.fury.io/js/generator-node-gulp-coffee.svg
-[travis-url]: https://travis-ci.org/liuxiong332/generator-node-gulp-coffee
-[travis-image]: https://travis-ci.org/liuxiong332/generator-node-gulp-coffee.svg?branch=master
-[daviddm-url]: https://david-dm.org/liuxiong332/generator-node-gulp-coffee.svg?theme=shields.io
-[daviddm-image]: https://david-dm.org/liuxiong332/generator-node-gulp-coffee
-[coveralls-url]: https://coveralls.io/r/liuxiong332/generator-node-gulp-coffee
-[coveralls-image]: https://coveralls.io/repos/liuxiong332/generator-node-gulp-coffee/badge.png
