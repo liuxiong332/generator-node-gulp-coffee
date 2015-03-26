@@ -238,7 +238,7 @@ module.exports = yeoman.generators.Base.extend({
       this.dependencies += util.format('\n    "%s": "%s",', name, version);
     }
     if (this.dependencies.length > 0) {
-      this.dependencies = this.dependencies.replace('\n', '');
+      this.dependencies = this.dependencies.replace(/\s+/, '');
       this.dependencies = this.dependencies.substring(0, this.dependencies.length - 1);
     }
   },
