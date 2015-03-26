@@ -22,10 +22,10 @@
     "coffee"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
+    "chalk": "^0.5.1",
     "npm-latest": "^0.2.0",
     "npm-name": "^1.0.1",
-    "yeoman-generator": "^0.18.10",
+    "yeoman-generator": "^0.17.5",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
