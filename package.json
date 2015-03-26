@@ -22,10 +22,10 @@
     "coffee"
   ],
   "dependencies": {
-    "chalk": "^0.5.1",
+    "chalk": "^1.0.0",
     "npm-latest": "^0.2.0",
     "npm-name": "^1.0.1",
-    "yeoman-generator": "^0.17.5",
+    "yeoman-generator": "^0.18.10",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
@@ -41,8 +41,7 @@
     "gulp-plumber": "^0.6.5",
     "gulp-util": "^3.0.1",
     "jshint-stylish": "^0.4.0",
-    "should": "^4.0.4",
-    "yeoman-generator": "0.18.10"
+    "should": "^4.0.4"
   },
   "peerDependencies": {
     "yo": ">=1.0.3"
