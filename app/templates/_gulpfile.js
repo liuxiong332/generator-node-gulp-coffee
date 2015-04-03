@@ -2,6 +2,7 @@
 
 var gulp   = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var CI = process.env.CI === 'true';
 
 var paths = {
   coffee: ['./lib/**/*.coffee'],
@@ -31,7 +32,7 @@ gulp.task('istanbul', function (cb) {
       gulp.src(paths.tests)
         .pipe(plugins.plumber(plumberConf))<% if (testFramework === 'jasmine') { %>
         .pipe(plugins.jasmine())<% } %><% if (testFramework === 'mocha') { %>
-        .pipe(plugins.mocha())<% } %>
+        .pipe(plugins.mocha({reporter: CI ? 'spec' : 'nyan'}))<% } %>
         .pipe(plugins.coffeeIstanbul.writeReports()) // Creating the reports after tests runned
         .on('finish', function() {
           process.chdir(__dirname);

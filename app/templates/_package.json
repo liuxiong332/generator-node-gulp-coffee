@@ -20,6 +20,7 @@
     <%= dependencies %>
   <% } %>},
   "devDependencies": {
+    "autobahn": "^0.9.6",
     "gulp": "^3.8.8",<% if (releaseModule) { %>
     "gulp-util": "^3.0.1",
     "gulp-bump": "^0.1.11",<% } %>
