@@ -20,7 +20,6 @@
     <%= dependencies %>
   <% } %>},
   "devDependencies": {
-    "autobahn": "^0.9.6",
     "gulp": "^3.8.8",<% if (releaseModule) { %>
     "gulp-util": "^3.0.1",
     "gulp-bump": "^0.1.11",<% } %>
@@ -33,7 +32,8 @@
     "gulp-coffee": "^2.3.1",
     "gulp-load-plugins": "^0.6.0",
     "gulp-plumber": "^0.6.5",
-    "coffee-script": "^1.9.1"
+    "coffee-script": "^1.9.1",
+    "sinon": "^1.14.1"
   },
   "scripts": {<% if (coverallsModule) { %>
     "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",<% } %>
