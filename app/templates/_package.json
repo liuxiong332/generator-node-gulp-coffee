@@ -15,6 +15,9 @@
     "type": "git",
     "url": "<%= repoUrl %>"
   },
+  "files": [
+    "dist"
+  ],
   "keywords":[],
   "dependencies": {<% if (dependencies) { %>
     <%= dependencies %>

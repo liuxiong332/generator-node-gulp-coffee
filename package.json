@@ -1,7 +1,7 @@
 {
   "name": "generator-node-gulp-coffee",
   "description": "A node generator for Yeoman",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "homepage": "https://github.com/liuxiong332/generator-node-gulp-coffee",
   "bugs": "https://github.com/liuxiong332/generator-node-gulp-coffee/issues",
   "license": "MIT",
