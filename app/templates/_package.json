@@ -5,7 +5,7 @@
   "homepage": "<%= props.homepage %>",<%}%>
   "bugs": "<%= repoUrl %>/issues",
   "license": "<%= props.license %>",
-  "main": "dist/lib/<%= slugname %>.js",
+  "main": "dist/<%= slugname %>.js",
   "author": {
     "name": "<%= props.authorName %>"<% if (props.authorEmail) { %>,
     "email": "<%= props.authorEmail %>"<% } %><% if (props.authorUrl) { %>,
@@ -41,6 +41,6 @@
   "scripts": {<% if (coverallsModule) { %>
     "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",<% } %>
     "test": "gulp test",
-    "prepublish": "gulp dist",
+    "prepublish": "gulp dist"
   }
 }
