@@ -43,6 +43,7 @@ Install the generator by running: `npm install -g generator-node-gulp-coffee`.
 - Optional – Upload LCOV data to [coveralls.io](http://coveralls.io) with [coveralls](https://github.com/cainus/node-coveralls)
 - Optional – Bump npm versions with [gulp-bump](https://github.com/stevelacy/gulp-bump)
 - Optional - Jasmine Unit Testing with [gulp-jasmine](https://github.com/sindresorhus/gulp-jasmine)
+- Optional - Easy dependency injection for node.js unit testing with [rewire] (https://github.com/jhnns/rewire)
 
 ### dependencies
 
