@@ -1,7 +1,7 @@
 
 <%= safeSlugname %> = require '../lib/<%= slugname %>'
 <% if (testFramework === 'mocha') { %>
-assert = require 'should' <% } %>
+should = require('chai').should() <% } %>
 
 describe '<%= safeSlugname %>', ->
 
