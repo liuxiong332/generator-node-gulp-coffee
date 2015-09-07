@@ -132,6 +132,10 @@ module.exports = yeoman.generators.Base.extend({
           value: 'istanbulModule',
           name: 'istanbul (JS code coverage tool)',
           checked: true
+        }, {
+          value: 'rewireModule',
+          name: 'rewire (Easy dependency injection for node.js unit testing)',
+          checked: true
         }
       ]
     }];
@@ -144,6 +148,7 @@ module.exports = yeoman.generators.Base.extend({
 
       this.releaseModule = hasMod('releaseModule');
       this.istanbulModule = hasMod('istanbulModule');
+      this.rewireModule = hasMod('rewireModule');
       this.coverallsModule = true;
 
       if (this.istanbulModule) {
@@ -246,6 +251,7 @@ module.exports = yeoman.generators.Base.extend({
   copyfiles: function () {
     this.copy('_coffeelint.json', 'coffeelint.json');
     this.copy('_gitignore', '.gitignore');
+    this.copy('_gitignore', '.dockerignore');
     this.copy('_travis.yml', '.travis.yml');
     this.copy('editorconfig', '.editorconfig');
 
